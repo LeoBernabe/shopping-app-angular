@@ -28,9 +28,25 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              },
+              {
+                "input": "node_modules/ngx-toastr/toastr.css"
+              },
+              {
+                "input": "node_modules/font-awesome/css/font-awesome.css"
+              } 
             ],
-            "scripts": []
+            "scripts": [      
+              {
+                "input": "node_modules/jquery/dist/jquery.slim.min.js"
+              },
+              {
+                "input": "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              }
+            ]
           },
           "configurations": {
             "production": {
@@ -67,7 +83,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "shopping-app-angular:build"
+            "browserTarget": "shopping-app-angular:build",
+            "port": 4201
           },
           "configurations": {
             "production": {

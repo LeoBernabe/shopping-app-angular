@@ -1,0 +1,22 @@
+<div class="row pl-2 pr-2 justify-content-start">
+  <div class="col-sm-3" *ngFor="let product of productList">
+    <div class='card m-2'>
+      <img class='card-img-top' [src]="'././assets/images/noImage.png'">
+        <div class='card-body text-left'>
+            <h5 class='card-title'>{{product.productName}}</h5>
+            <p class='card-text small'>{{product.productDescription}}</p> 
+            <p class='card-text text-black-50 small'>{{product.productPrice}}</p>
+        </div>
+        <div class='card-footer text-center'>
+            <div class='row'>
+                <div class='col-6 p-0'>
+                    <a class='text-black-50 btn btn-link btn-sm' [routerLink]="['/product-form', product.id]"><i class="fa fa-edit"></i> Edit</a> 
+                </div>
+                <div class='col-6 p-0'>
+                    <span class='text-black-50 btn btn-link btn-sm' (click)="deleteProduct(product.id)"><i class="fa fa-trash"></i> Delete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
